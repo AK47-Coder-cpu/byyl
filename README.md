@@ -1,40 +1,3 @@
-\documentclass[journal,twoside,web]{ieeecolor}
-
-\usepackage{etoolbox}
-\makeatletter
-\@ifundefined{color@begingroup}%
-{\let\color@begingroup\relax
-\let\color@endgroup\relax}{}%
-\def\fix@ieeecolor@hbox#1{%
-\hbox{\color@begingroup#1\color@endgroup}}
-\patchcmd\@makecaption{\hbox}{\fix@ieeecolor@hbox}{}{\FAILED}
-\patchcmd\@makecaption{\hbox}{\fix@ieeecolor@hbox}{}{\FAILED}
-
-\usepackage{tmi}
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts}
-\allowdisplaybreaks
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{textcomp}
-\usepackage{booktabs}
-\usepackage{bm}
-\usepackage{multicol}
-\usepackage{multirow}
-\usepackage{amssymb}
-\usepackage{subfigure}
-
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-% \markboth{\journalname, VOL. XX, NO. XX, XXXX 2020}
-% {Author \MakeLowercase{\textit{et al.}}: Beyond MixUps: Task-Guided Variational Partial Synthesis for Retinal Fundus Image Analysis}
-\begin{document}
-\title{Supplementary information for ``\textit{Beyond MixUps: Task-Guided Variational Partial Synthesis for Fundus Image Analysis}''}
-\author{Enyi~Li, Gaoruishu~Long, Xuhuan~Wang, Wei~Chen, and~Jinchao~Liu, \IEEEmembership{Member, IEEE}
-}
-
-\onecolumn
-\maketitle
 \section{Derivation of the ELBO loss for TVPS}
 Here we show how to derive the \textit{evidence lower bound (ELBO)} of our proposed model in details. We started from the marginal likelihood of observable variables $\bm(x,y)$
 
@@ -300,4 +263,3 @@ Here, we present the specific architectures of the encoder-decoder and discrimin
     \label{fig_network_details}
 \end{figure}
 
-\end{document}
